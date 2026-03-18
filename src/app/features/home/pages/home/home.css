@@ -1,0 +1,55 @@
+.imgBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Imagen centrada y más pequeña */
+.imgBackground img {
+    width: 25%;    /* controla tamaño */
+    height: auto;  /* mantiene proporción */
+    display: block;
+    z-index: 0;
+    position: relative;
+    opacity: 75%;
+}
+
+/* Degradado encima de la imagen */
+.imgBackground::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 75%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+    position: relative;      /* relativo para estar encima de la imagen */
+    z-index: 1;              /* siempre encima de .imgBackground */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;        /* opcional: separación lateral */
+}
+
+.home img {
+    width: 10%;
+}
+
+.optionsSelection {
+    color: white;
+    display: flex;
+    gap: 10px;
+}
