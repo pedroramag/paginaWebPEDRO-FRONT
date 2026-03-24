@@ -50,6 +50,9 @@
 
 .optionsSelection {
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
