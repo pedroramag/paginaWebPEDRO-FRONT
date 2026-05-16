@@ -1,0 +1,33 @@
+.socialMedia {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    margin-bottom: 10px;
+
+    width: 100%;
+
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: black;
+
+    z-index: 1;
+}
+
+.socialMedia img {
+
+    width: 55px;
+    display: block;
+
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+}
+
+.socialMedia img:hover {
+    transition: transform 1.6s ease-in-out;
+    transform: rotate(180deg);
+}
