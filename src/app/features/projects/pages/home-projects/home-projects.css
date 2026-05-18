@@ -1,0 +1,344 @@
+.container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px 40px;
+    padding-bottom: 2%;
+
+    box-sizing: border-box;
+}
+
+
+/* CONTENEDOR DE TODOS LOS PROYECTOS */
+.proyectos {
+    color: white;
+    font-family: Arial, sans-serif;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 35%);
+
+    justify-content: center;
+
+    column-gap: 120px;
+    row-gap: 5%;
+
+    margin-top: 5%;
+}
+
+
+/* CARD PROYECTO */
+.proyecto {
+    position: relative;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 0cap;
+    border-left: 0cap;
+    border-right: 0cap;
+
+    color: white;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
+}
+
+/* CAPA OSCURA */
+.proyecto::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 1;
+}
+
+
+/* CONTENIDO */
+.proyecto p {
+    position: relative;
+    z-index: 2;
+
+    margin: 6px 0;
+
+    line-height: 1.4;
+
+    transition: color 0.3s ease;
+}
+
+.underline {
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    padding-bottom: 3px;
+
+    letter-spacing: 1px;
+}
+
+.finalizado {
+    color: rgb(211, 35, 35);
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 5px rgba(211, 35, 35, 0.5),
+        0 0 10px rgba(211, 35, 35, 0.3);
+}
+
+/* EFECTO TEXTO HOVER */
+.proyecto:hover p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+/*---------- PROYECTOS ----------*/
+
+
+/* SKY */
+.proyecto1-SKY {
+    position: relative;
+}
+.proyecto1-SKY::before {
+    content: "sky";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+    margin-right: 20px;
+
+    font-size: 150px;
+    font-weight: bold;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+/* HOVER SKY -> MULTICOLOR */
+.proyecto1-SKY:hover {
+    transform: scale(1.03);
+
+    border: 1px solid transparent;
+
+    box-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff7300,
+        0 0 9px #fffb00,
+        0 0 12px #48ff00,
+        0 0 15px #00ffd5,
+        0 0 18px #002bff,
+        0 0 21px #7a00ff;
+
+    cursor: pointer;
+}
+.proyecto1-SKY:hover::before {
+    background: linear-gradient(95deg,
+            #c5681c 0%,
+            #ff7300 60%,
+            #e74848 75%,
+            #9b42fa 85%,
+            #002aff 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* BIT */
+.proyecto2-BIT {
+    position: relative;
+
+    overflow: hidden;
+}
+/* IMAGEN */
+.proyecto2-BIT::before {
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 60%;
+    height: 60%;
+
+    background-image: url('/logosProjects/BIT.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter 0.35s ease,
+        transform 0.35s ease;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+/* HOVER BIT -> AZUL */
+.proyecto2-BIT:hover {
+    transform: scale(1.03);
+
+    border: 1px solid rgba(0, 140, 255, 0.5);
+
+    box-shadow:
+        0 0 12px rgba(0, 140, 255, 0.4),
+        0 0 25px rgba(0, 140, 255, 0.25),
+        0 0 45px rgba(0, 140, 255, 0.15);
+
+    cursor: pointer;
+}
+/* SOLO LA IMAGEN CAMBIA */
+.proyecto2-BIT:hover::before {
+    filter: grayscale(0%);
+}
+
+
+/* NOTWALL */
+.proyecto3-NOTWALL {
+    position: relative;
+
+    overflow: hidden;
+}
+/* IMAGEN */
+.proyecto3-NOTWALL::before {
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 50%;
+    height: 50%;
+
+    background-image: url('/logosProjects/NOTWALL.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter 0.35s ease,
+        transform 0.35s ease;
+
+    z-index: 0;
+}
+/* HOVER */
+.proyecto3-NOTWALL:hover {
+    transform: scale(1.03);
+
+    border: 1px solid rgba(0, 255, 120, 0.45);
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 120, 0.35),
+        0 0 25px rgba(0, 255, 120, 0.2),
+        0 0 45px rgba(0, 255, 120, 0.12);
+
+    cursor: pointer;
+}
+/* SOLO LA IMAGEN CAMBIA */
+.proyecto3-NOTWALL:hover::before {
+    filter: grayscale(0%);
+}
+
+
+/* APPRUTINAS */
+.proyecto4-APPRUTINAS {
+    position: relative;
+}
+.proyecto4-APPRUTINAS::before {
+    content: "RT";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+    margin-right: 20px;
+
+    font-size: 150px;
+    font-weight: bold;
+
+    color: rgba(255, 255, 255, 0.644);
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+.proyecto4-APPRUTINAS:hover {
+    transform: scale(1.03);
+
+    border: 1px solid rgba(255, 217, 0, 0.5);
+
+    box-shadow:
+        0 0 12px rgba(255, 217, 0, 0.35),
+        0 0 25px rgba(255, 217, 0, 0.2),
+        0 0 45px rgba(255, 217, 0, 0.12);
+
+    cursor: pointer;
+}
+.proyecto4-APPRUTINAS:hover::before {
+    color: rgba(255, 217, 0, 0.75);
+}
+
+
+/* MI HISTORIA */
+.proyecto5-MI_HISTORIA {
+    background-image: url('/logoWeb/Logo-Pedro-1-tamanoGrandeNOFONDO-GRIS.png');
+
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    margin-right: 20px;
+
+    transition: 0.35s ease;
+}
+/* HOVER MI HISTORIA -> BLANCO */
+.proyecto5-MI_HISTORIA:hover {
+    transform: scale(1.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.35),
+        0 0 25px rgba(255, 255, 255, 0.2),
+        0 0 45px rgba(255, 255, 255, 0.12);
+
+    cursor: pointer;
+}
