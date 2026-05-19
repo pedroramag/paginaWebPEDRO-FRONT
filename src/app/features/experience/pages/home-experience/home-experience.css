@@ -12,3 +12,100 @@
     padding: 20px 40px;
     box-sizing: border-box;
 }
+
+/* CONTENEDOR DE TODOS LAS COMPAÑIAS */
+.companies {
+    color: white;
+    font-family: Arial, sans-serif;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 650px);
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 5%;
+}
+
+/* CARD COMPANIE */
+.companie {
+    width: 650px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    background-color: rgb(27, 27, 27);
+}
+
+.companie img {
+    width: 350px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+.companie p:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-work {
+    display: flex; /*-> El elemento se convierte en un contenedor flexible y todos sus hijos se alinean automáticamente.*/
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+    text-transform: uppercase;
+}
+.job-duration {
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #ffffffcc;
+
+    background-color: rgba(9, 255, 0, 0.05);
+
+    padding: 4px 10px;
+    border-radius: 10px;
+
+    width: fit-content;
+
+    margin: 0 auto;
+}
+.job-date {
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    letter-spacing: 1.5px;
+}
+
+.companie-IBERLEY {}
+
+.companie-ABANCA {}
+
+.companie-GRUPOBARREIRO {}
