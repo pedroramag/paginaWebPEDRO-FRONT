@@ -73,7 +73,7 @@ body {
 }
 
 .nameComplete {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
 
     margin-top: 75px;
@@ -83,8 +83,8 @@ body {
 
 .workstation {
     letter-spacing: 3px;
-    font-size: 20px;
-    margin-top: 50px;
+    font-size: 14px;
+    margin-top: 40px;
     opacity: 0.8;
 
     color: black;
