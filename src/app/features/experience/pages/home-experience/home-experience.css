@@ -24,7 +24,7 @@
 
     display: grid;
 
-    grid-template-columns: repeat(2, 480px);
+    grid-template-columns: repeat(2, 580px);
 
     justify-content: center;
 
@@ -41,7 +41,7 @@
 .companie {
     position: relative;
 
-    width: 480px;
+    width: 580px;
     min-height: 280px;
 
     border-radius: 18px;

@@ -23,7 +23,7 @@
 
     display: grid;
 
-    grid-template-columns: repeat(2, 480px);
+    grid-template-columns: repeat(2, 580px);
 
     justify-content: center;
 
@@ -43,7 +43,7 @@
 .proyecto {
     position: relative;
 
-    width: 480px;
+    width: 580px;
     min-height: 280px;
 
     border-radius: 18px;
@@ -314,13 +314,13 @@
     border: 1px solid transparent;
 
     box-shadow:
-        0 0 3px #ff0000,
-        0 0 6px #ff7300,
-        0 0 9px #fffb00,
-        0 0 12px #48ff00,
-        0 0 15px #00ffd5,
-        0 0 18px #002bff,
-        0 0 21px #7a00ff;
+        0 0 2px #ff0000,
+        0 0 5px #ff7300,
+        0 0 8px #fffb00,
+        0 0 10px #48ff00,
+        0 0 12px #00ffd5,
+        0 0 15px #002bff,
+        0 0 18px #7a00ff;
 }
 
 .proyecto1-SKY:hover::before {

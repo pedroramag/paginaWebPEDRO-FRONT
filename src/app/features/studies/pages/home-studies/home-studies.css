@@ -6,10 +6,9 @@
     min-height: 100vh;
 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 
     padding: 20px 40px;
+
     box-sizing: border-box;
 
     overflow: visible;
@@ -17,149 +16,286 @@
 
 /* GRID */
 .studies {
-    color: white;
-    font-family: Arial, sans-serif;
-
     width: 100%;
 
     display: grid;
 
-    grid-template-columns: repeat(2, 480px);
+    grid-template-columns: repeat(2, 580px);
 
     justify-content: center;
-
     align-items: start;
 
-    gap: 35px;
+    column-gap: 35px;
+    row-gap: 35px;
 
     margin-top: 5%;
 
-    overflow: visible;
+    align-content: start;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
 }
 
 /* CARD */
 .studie {
     position: relative;
 
-    width: 480px;
-    min-height: 280px;
+    width: 100%;
+    max-width: 580px;
 
-    border-radius: 18px;
+    aspect-ratio: 580 / 300;
+
+    border-radius: 22px;
 
     overflow: hidden;
 
-    background-color: rgba(27, 27, 27, 0.65);
+    background: rgba(27, 27, 27, 0.65);
 
-    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     cursor: pointer;
 
-    display: flex;
-    flex-direction: column;
-
-    z-index: 1;
+    transform-origin: center;
 
     transition:
-        width 0.4s ease,
-        margin 0.4s ease,
-        box-shadow 0.35s ease;
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
 }
 
-/* EXPANSIÓN */
+/* BRILLO */
+.studie::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.05),
+            transparent 45%);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+.studie:hover::before {
+    opacity: 1;
+}
+
+/* HOVER */
 .studie:hover {
-    width: 600px;
+    transform: scale(1.06);
+    z-index: 10;
 
-    z-index: 999;
-
-    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(255, 255, 255, 0.05);
 }
 
-/* IZQUIERDA */
-.studies .studie:nth-child(odd):hover {
-    margin-left: -120px;
+/* DIRECCIÓN */
+.studies .studie:nth-child(odd) {
+    transform-origin: right center;
 }
 
-/* DERECHA */
-.studies .studie:nth-child(even):hover {
-    margin-right: -120px;
+.studies .studie:nth-child(even) {
+    transform-origin: left center;
 }
 
+/* CONTENT */
 .studie-content {
+    position: relative;
+    z-index: 2;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
 
     text-align: center;
 
-    padding: 15px;
+    height: 100%;
 
-    min-height: 280px;
+    padding: 18px;
 
     transition: transform 0.35s ease;
 }
 
 .studie:hover .studie-content {
-    transform: scale(1.02);
+    transform: scale(1.015);
 }
 
-/* TECNOLOGIAS */
-.technologies {
-    font-size: 12px;
-
-    padding: 8px 14px;
-
-    border-radius: 18px;
-
-    background-color: rgba(255,255,255,0.08);
-
-    color: #00ff99;
-
-    letter-spacing: 1px;
-
-    align-self: flex-start;
-}
-
-/* IMAGEN */
+/* IMAGE */
 .studie img {
     width: 280px;
     height: 120px;
 
     object-fit: contain;
 
-    display: block;
+    margin-bottom: 10px;
 }
 
-/* INFO */
+/* SCHOOL NAME */
+.school-name {
+    font-size: 25px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+    padding: 20px;
+
+    color: rgb(255, 255, 255, 0.75);
+}
+
+/* INFO WRAPPER */
 .information-studie {
     display: flex;
     flex-direction: column;
 
-    gap: 8px;
+    align-items: center;
 
-    padding: 8px 15px;
+    gap: 10px;
+
+    max-width: 100%;
 }
 
+/* TITLE */
 .studie-title {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 700;
 
-    letter-spacing: 1px;
+    line-height: 1.5;
 
-    color: white;
+    letter-spacing: 1.5px;
 
     text-transform: uppercase;
+
+    color: white;
 }
 
+.studie-study {
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: rgb(244, 167, 67, 0.75);
+}
+
+/* DATE */
 .studie-date {
     font-size: 11px;
 
-    color: rgba(255, 255, 255, 0.6);
-
     letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.6);
 }
 
-/* CLASES */
-.studie-IBERLEY {}
-.studie-ABANCA {}
-.studie-GRUPOBARREIRO {}
+/* LINK */
+.school-web {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.school-web a {
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.school-web a:hover {
+    transform: translateY(-2px);
+}
+
+/* UPGRADE HUB */
+.studie-UPGRADEHUB img {
+    filter: grayscale(100%);
+}
+.studie-UPGRADEHUB:hover {
+    filter: grayscale(0%);
+    border: 1px solid rgba(0, 255, 153, 0.5);
+}
+.studie-UPGRADEHUB .school-web a:hover {
+    background: rgba(0, 255, 153, 0.08);
+    border: 1px solid rgba(0, 255, 153, 0.45);
+    box-shadow:
+        0 0 12px rgba(0, 255, 153, 0.18),
+        0 0 25px rgba(0, 255, 153, 0.08);
+}
+
+/* AFUNDACION */
+.studie-AFUNDACION:hover {
+    border: 1px solid rgba(0, 140, 255, 0.5);
+}
+.studie-AFUNDACION:hover .school-name {
+    color: rgb(0, 140, 255);
+}
+.studie-AFUNDACION .school-web a:hover {
+    background: rgba(0, 140, 255, 0.08);
+    border: 1px solid rgba(0, 140, 255, 0.45);
+    box-shadow:
+        0 0 12px rgba(0, 140, 255, 0.18),
+        0 0 25px rgba(0, 140, 255, 0.08);
+}
+
+/* WIRTZ */
+.studie-WIRTZ:hover {
+    border: 1px solid rgba(255, 217, 0, 0.5);
+}
+.studie-WIRTZ:hover .school-name {
+    color: rgba(255, 217, 0);
+}
+.studie-WIRTZ .school-web a:hover {
+    background: rgba(255, 217, 0, 0.08);
+    border: 1px solid rgba(255, 217, 0, 0.45);
+    box-shadow:
+        0 0 12px rgba(255, 217, 0, 0.18),
+        0 0 25px rgba(255, 217, 0, 0.08);
+}
+
+/* NEBRIJA */
+.studie-NEBRIJA:hover {
+    border: 1px solid rgba(255, 80, 80, 0.5);
+}
+.studie-NEBRIJA:hover .school-name {
+    color: rgba(255, 80, 80);
+}
+.studie-NEBRIJA .school-web a:hover {
+    background: rgba(255, 80, 80, 0.08);
+    border: 1px solid rgba(255, 80, 80, 0.45);
+    box-shadow:
+        0 0 12px rgba(255, 80, 80, 0.18),
+        0 0 25px rgba(255, 80, 80, 0.08);
+}
