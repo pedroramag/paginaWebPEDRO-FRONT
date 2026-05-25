@@ -1,9 +1,32 @@
-<div class="container">
+<div class="container" (click)="mostrarMensajeNoDisponible = false">
 
-    <!-- HEAD -->
-    <app-option-selection-component />
+    <app-option-selection-component></app-option-selection-component>
 
-    <!-- CENTRO -->
-    <div></div>
-    
+    <div class="containerAplications">
+
+        @if (mostrarMensajeNoDisponible) {
+        <div class="toast" (click)="$event.stopPropagation()">
+            DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES
+        </div>
+        }
+
+        <div class="aplications">
+
+            <div class="aplication calcHipo" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+                <!-- "$event.stopPropagation() -> detiene la propagación del evento de click,
+                      evita que el click suba al elemento padre (container)
+                      y por tanto evita que se ejecuten sus (click) -->
+                <img src="/logosAplications/HIPO-logo.png">
+                <div>CALCULADORA HIPOTECA</div>
+            </div>
+
+            <div class="aplication calcHipoINV" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+                <img src="/logosAplications/HIPO-INV-logo.png">
+                <div>CALCULADORA HIPOTECA INVERSIÓN INMUEBLES</div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
