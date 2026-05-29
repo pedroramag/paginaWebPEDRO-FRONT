@@ -3,12 +3,121 @@
     z-index: 2;
 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
 
     padding: 20px 40px;
     box-sizing: border-box;
+}
+
+/* SECCIÓN */
+.about-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 80px;
+}
+
+/* CAJA PRINCIPAL */
+.about-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 60px;
+
+    /* Color base tipo papel envejecido */
+    background: linear-gradient(to bottom right,
+            #f3e7c3,
+            #e7d6a3);
+
+    /* Textura sutil (ruido/papel) */
+    background-image:
+        url("/transparentImages/1.png");
+
+    background-blend-mode: multiply;
+    background-size: auto;
+
+    border: 1px solid rgba(120, 90, 40, 0.3);
+    border-radius: 24px;
+
+    /* Sombra tipo papel levantado */
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        inset 0 0 60px rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(2px);
+
+    transition: 0.3s ease;
+
+    font-family: Arial, sans-serif;
+}
+
+/* EFECTO HOVER SUAVE */
+.about-container:hover {
+    transform: translateY(-2px);
+}
+
+/* TITULO */
+.about-container h2 {
+    font-size: 48px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+
+    color: #ffffff;
+
+    letter-spacing: -1px;
+}
+
+/* PÁRRAFOS */
+.about-container p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #cfcfcf;
+
+    margin-bottom: 28px;
+
+    font-weight: 300;
+}
+
+/* FRASE FINAL */
+.about-container blockquote {
+    margin-top: 50px;
+
+    padding-left: 20px;
+
+    border-left: 3px solid #ffffff30;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+.contact {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+
+    text-align: center;
+    font-weight: bold;
+
+    color: rgba(207, 207, 207, .25);
+}
+
+.contact a {
+    color: rgba(207, 207, 207, .25);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact a:hover {
+    color: rgba(207, 207, 207, .6);
 }
