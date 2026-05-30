@@ -1,3 +1,4 @@
+/* CONTAINER */
 .container {
     position: relative;
     z-index: 2;
@@ -23,11 +24,9 @@
     width: 100%;
 
     display: grid;
-
     grid-template-columns: repeat(2, 580px);
 
     justify-content: center;
-
     align-items: start;
 
     gap: 35px;
@@ -49,8 +48,7 @@
     overflow: hidden;
 
     background-color: rgba(27, 27, 27, 0.65);
-
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 
     cursor: pointer;
 
@@ -59,29 +57,14 @@
 
     z-index: 1;
 
-    transition:
-        width 0.4s ease,
-        margin 0.4s ease,
-        box-shadow 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* EXPANSIÓN */
+/* HOVER (sin mover layout) 
 .companie:hover {
-    width: 600px;
-
+    transform: scale(1.02);
     z-index: 999;
-
-    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
-}
-
-/* IZQUIERDA */
-.companies .companie:nth-child(odd):hover {
-    margin-left: -120px;
-}
-
-/* DERECHA */
-.companies .companie:nth-child(even):hover {
-    margin-right: -120px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
 }
 
 /* FRONT */
@@ -115,38 +98,28 @@
     padding: 0 25px 25px 25px;
 
     opacity: 0;
-
     max-height: 0;
-
     overflow: hidden;
 
     transform: translateY(20px);
 
-    transition:
-        opacity 0.45s ease,
-        max-height 0.6s ease,
-        transform 0.45s ease;
+    transition: opacity 0.45s ease, max-height 0.6s ease, transform 0.45s ease;
 }
 
 /* SHOW BACK */
 .companie:hover .companie-back {
     opacity: 1;
-
     max-height: 2000px;
-
     transform: translateY(0);
 }
 
 /* TEXTOS */
 .companie-back p {
     font-size: 13px;
-
     line-height: 1.75;
-
-    color: rgba(255,255,255,0.82);
+    color: rgba(255, 255, 255, 0.82);
 
     width: 100%;
-
     margin: 0 0 15px 0;
 
     white-space: pre-line;
@@ -155,15 +128,12 @@
 /* TITULOS */
 .companie-back h2 {
     font-size: 22px;
-
     letter-spacing: 1.5px;
-
     margin-bottom: 15px;
-
     color: white;
 }
 
-/* TECNOLOGIAS */
+/* TECNOLOGÍAS */
 .technologies {
     font-size: 12px;
 
@@ -171,7 +141,7 @@
 
     border-radius: 18px;
 
-    background-color: rgba(255,255,255,0.08);
+    background-color: rgba(255, 255, 255, 0.08);
 
     color: #00ff99;
 
@@ -184,9 +154,7 @@
 .companie img {
     width: 280px;
     height: 120px;
-
     object-fit: contain;
-
     display: block;
 }
 
@@ -203,39 +171,32 @@
 .job-title {
     font-size: 14px;
     font-weight: bold;
-
     letter-spacing: 1px;
-
     color: white;
-
     text-transform: uppercase;
-}
-
-.job-duration {
-    font-size: 11px;
-
-    color: #ffffffcc;
-
-    background-color: rgba(9, 255, 0, 0.05);
-
-    padding: 3px 8px;
-
-    border-radius: 8px;
-
-    width: fit-content;
-
-    margin: 0 auto;
 }
 
 .job-date {
     font-size: 11px;
-
     color: rgba(255, 255, 255, 0.6);
-
     letter-spacing: 1px;
 }
 
-/* CLASES */
+.job-duration {
+    font-size: 11px;
+    color: #ffffffcc;
+
+    background-color: rgba(9, 255, 0, 0.05);
+    padding: 3px 8px;
+    border-radius: 8px;
+
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* CLASES PERSONALIZADAS */
 .companie-IBERLEY {}
+
 .companie-ABANCA {}
+
 .companie-GRUPOBARREIRO {}

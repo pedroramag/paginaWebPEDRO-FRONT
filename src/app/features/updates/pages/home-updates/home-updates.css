@@ -13,12 +13,18 @@
     box-sizing: border-box;
 }
 
-.containerUpdate {
+.containerMargin {
     width: 100%;
     max-width: 75%;
 
-    margin-top: 5%;
+    margin-top: 4%;
 
+    display: flex; /* Activa Flexbox para organizar los elementos hijos */
+    flex-direction: column; /* Coloca los hijos en vertical (uno debajo de otro) */
+    gap: 30px; /* Deja 20px de espacio entre cada hijo directo */
+}
+
+.update {
     padding: 20px;
 
     display: flex;
