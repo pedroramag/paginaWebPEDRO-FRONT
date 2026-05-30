@@ -10,14 +10,15 @@
     align-items: center;
 
     padding: 20px 40px;
+    padding-bottom: 5%;
+    padding-top: 6%;
+
     box-sizing: border-box;
 }
 
 .containerMargin {
     width: 100%;
     max-width: 75%;
-
-    margin-top: 4%;
 
     display: flex; /* Activa Flexbox para organizar los elementos hijos */
     flex-direction: column; /* Coloca los hijos en vertical (uno debajo de otro) */

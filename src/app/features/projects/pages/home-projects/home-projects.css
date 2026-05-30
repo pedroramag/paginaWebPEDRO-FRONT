@@ -11,8 +11,10 @@
 
     display: flex;
 
-    padding: 20px 40px;
     box-sizing: border-box;
+    padding: 20px 40px;
+    padding-bottom: 5%;
+    padding-top: 6%;
 
     overflow: visible;
 }
@@ -29,8 +31,6 @@
 
     justify-content: center;
     gap: 35px;
-
-    margin-top: 5%;
 
     color: white;
     font-family: Arial, sans-serif;

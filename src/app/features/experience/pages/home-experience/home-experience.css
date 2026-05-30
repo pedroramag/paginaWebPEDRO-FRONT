@@ -11,6 +11,9 @@
     align-items: flex-start;
 
     padding: 20px 40px;
+    padding-bottom: 5%;
+    padding-top: 6%;
+
     box-sizing: border-box;
 
     overflow: visible;
@@ -30,8 +33,6 @@
     align-items: start;
 
     gap: 35px;
-
-    margin-top: 5%;
 
     overflow: visible;
 }

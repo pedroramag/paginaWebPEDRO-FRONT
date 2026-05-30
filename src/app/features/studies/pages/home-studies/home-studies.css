@@ -8,6 +8,8 @@
     display: flex;
 
     padding: 20px 40px;
+    padding-bottom: 5%;
+    padding-top: 6%;
 
     box-sizing: border-box;
 
@@ -27,8 +29,6 @@
 
     column-gap: 35px;
     row-gap: 35px;
-
-    margin-top: 5%;
 
     align-content: start;
 
