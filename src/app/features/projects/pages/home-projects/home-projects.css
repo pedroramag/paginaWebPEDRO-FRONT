@@ -1,7 +1,4 @@
-/* ========================= */
 /* CONTAINER */
-/* ========================= */
-
 .container {
     position: relative;
     z-index: 2;
@@ -10,19 +7,32 @@
     min-height: 100vh;
 
     display: flex;
+    flex-direction: column;
 
-    box-sizing: border-box;
     padding: 20px 40px;
     padding-bottom: 5%;
     padding-top: 6%;
 
+    box-sizing: border-box;
+
     overflow: visible;
+
+    font-family: Arial, sans-serif;
 }
 
-/* ========================= */
-/* GRID */
-/* ========================= */
+.informationClic {
+    width: 100%;
+    text-align: center;
 
+    margin-bottom: 30px;
+
+    color: rgb(255, 255, 255, .4);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* GRID */
 .proyectos {
     width: 100%;
 
@@ -33,13 +43,9 @@
     gap: 35px;
 
     color: white;
-    font-family: Arial, sans-serif;
 }
 
-/* ========================= */
 /* CARD */
-/* ========================= */
-
 .proyecto {
     position: relative;
 
@@ -65,10 +71,7 @@
     z-index: 999;
 }
 
-/* ========================= */
 /* FRONT */
-/* ========================= */
-
 .proyecto-front {
     position: relative;
     z-index: 2;
@@ -92,10 +95,7 @@
     transform: scale(1.02);
 }
 
-/* ========================= */
 /* BACK */
-/* ========================= */
-
 .proyecto-back {
     position: relative;
     z-index: 2;
@@ -119,10 +119,7 @@
     transform: translateY(0);
 }
 
-/* ========================= */
 /* TITLES */
-/* ========================= */
-
 .project-title {
     font-size: 34px;
     font-weight: bold;
@@ -147,10 +144,7 @@
     letter-spacing: 1px;
 }
 
-/* ========================= */
 /* STATUS */
-/* ========================= */
-
 .project-status-row {
     display: flex;
     align-items: center;
@@ -194,10 +188,7 @@
     text-transform: uppercase;
 }
 
-/* ========================= */
 /* TECHNOLOGIES */
-/* ========================= */
-
 .project-technologies {
     margin-top: 18px;
 
@@ -215,10 +206,7 @@
     transform: translateY(-2px);
 }
 
-/* ========================= */
 /* BACK TEXT */
-/* ========================= */
-
 .proyecto-back p {
     font-size: 13px;
     line-height: 1.7;
@@ -231,10 +219,7 @@
     color: rgba(255, 255, 255, 0.75);
 }
 
-/* ========================= */
 /* SKY */
-/* ========================= */
-
 .proyecto1-SKY::before {
     content: "sky";
 
@@ -279,10 +264,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* ========================= */
 /* BIT */
-/* ========================= */
-
 .proyecto2-BIT::before {
     content: "";
 
@@ -319,10 +301,7 @@
     filter: grayscale(0%);
 }
 
-/* ========================= */
 /* NOTWALL */
-/* ========================= */
-
 .proyecto3-NOTWALL::before {
     content: "";
 
@@ -359,10 +338,7 @@
     filter: grayscale(0%);
 }
 
-/* ========================= */
 /* APPRUTINAS */
-/* ========================= */
-
 .proyecto4-APPRUTINAS::before {
     content: "RT";
 
@@ -392,10 +368,7 @@
     color: rgba(255, 217, 0, 0.1);
 }
 
-/* ========================= */
 /* MI HISTORIA */
-/* ========================= */
-
 .proyecto5-MI_HISTORIA::before {
     content: "";
 
