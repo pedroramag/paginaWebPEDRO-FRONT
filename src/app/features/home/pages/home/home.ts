@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { HomeAboutMyWeb } from '../../../aboutMyWeb/pages/home-about-my-web/home-about-my-web';
 import { HomeAplications } from '../../../aplications/pages/home-aplications/home-aplications';
 import { HomeExperience } from '../../../experience/pages/home-experience/home-experience';
@@ -11,7 +11,6 @@ import { LinkedinComponent } from '../../../components/linkedin-component/linked
 @Component({
   selector: 'app-home',
   imports: [
-    HomeAboutMyWeb, HomeAplications, HomeExperience, HomeProjects, HomeStudies, 
     OptionSelectionComponent, LinkedinComponent
   ],
   templateUrl: './home.html',
@@ -19,4 +18,4 @@ import { LinkedinComponent } from '../../../components/linkedin-component/linked
 })
 export class Home {
 
- }
+}

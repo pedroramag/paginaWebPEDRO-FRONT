@@ -9,8 +9,7 @@ import { take, timer } from 'rxjs';
   standalone: true,
   imports: [
     CommonModule,
-    OptionSelectionComponent,
-    LinkedinComponent
+    OptionSelectionComponent
   ],
   templateUrl: './home-aplications.html',
   styleUrl: './home-aplications.css',
