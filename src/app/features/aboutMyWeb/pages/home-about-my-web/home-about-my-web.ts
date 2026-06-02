@@ -4,7 +4,7 @@ import { LinkedinComponent } from '../../../components/linkedin-component/linked
 
 @Component({
   selector: 'app-home-about-my-web',
-  imports: [OptionSelectionComponent, LinkedinComponent],
+  imports: [OptionSelectionComponent],
   templateUrl: './home-about-my-web.html',
   styleUrl: './home-about-my-web.css',
 })
