@@ -275,7 +275,7 @@
     width: 50%;
     height: 50%;
 
-    background-image: url('/logosProjects/BIT.png');
+    background-image: url('/assets/logosProjects/BIT.png');
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -312,7 +312,7 @@
     width: 40%;
     height: 40%;
 
-    background-image: url('/logosProjects/NOTWALL.png');
+    background-image: url('/assets/logosProjects/NOTWALL.png');
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -379,7 +379,7 @@
     width: 50%;
     height: 50%;
 
-    background-image: url('/logoWeb/Logo-Pedro-1-tamanoGrandeNOFONDO-GRIS.png');
+    background-image: url('/assets/logoWeb/Logo-Pedro-1-tamanoGrandeNOFONDO-GRIS.png');
 
     background-size: contain;
     background-repeat: no-repeat;
