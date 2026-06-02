@@ -35,7 +35,7 @@
 
     /* Textura sutil (ruido/papel) */
     background-image:
-        url("/transparentImages/1.png");
+        url("/assets/transparentImages/1.png");
 
     background-blend-mode: multiply;
     background-size: auto;
