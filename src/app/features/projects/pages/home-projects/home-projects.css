@@ -33,7 +33,7 @@
 }
 
 /* GRID */
-.proyectos {
+.projects {
     width: 100%;
 
     display: grid;
@@ -46,7 +46,7 @@
 }
 
 /* CARD */
-.proyecto {
+.project {
     position: relative;
 
     width: 580px;
@@ -65,14 +65,14 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* ✔️ HOVER SIN MOVIMIENTO LATERAL */
-.proyecto:hover {
+/* HOVER SIN MOVIMIENTO LATERAL */
+.project:hover {
     transform: scale(1.02);
     z-index: 999;
 }
 
 /* FRONT */
-.proyecto-front {
+.project-front {
     position: relative;
     z-index: 2;
 
@@ -91,12 +91,12 @@
     transition: transform 0.35s ease;
 }
 
-.proyecto:hover .proyecto-front {
+.project:hover .project-front {
     transform: scale(1.02);
 }
 
 /* BACK */
-.proyecto-back {
+.project-back {
     position: relative;
     z-index: 2;
 
@@ -113,7 +113,7 @@
     text-align: center;
 }
 
-.proyecto:hover .proyecto-back {
+.project:hover .project-back {
     opacity: 1;
     max-height: 500px;
     transform: translateY(0);
@@ -201,13 +201,13 @@
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.proyecto:hover .project-technologies {
+.project:hover .project-technologies {
     color: rgba(255, 255, 255, 0.9);
     transform: translateY(-2px);
 }
 
 /* BACK TEXT */
-.proyecto-back p {
+.project-back p {
     font-size: 13px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.85);
@@ -220,7 +220,7 @@
 }
 
 /* SKY */
-.proyecto1-SKY::before {
+.project1-SKY::before {
     content: "sky";
 
     position: absolute;
@@ -237,7 +237,7 @@
     z-index: 1;
 }
 
-.proyecto1-SKY:hover {
+.project1-SKY:hover {
     border: 1px solid transparent;
 
     box-shadow:
@@ -250,7 +250,7 @@
         0 0 18px #7a00ff;
 }
 
-.proyecto1-SKY:hover::before {
+.project1-SKY:hover::before {
     filter: opacity(0.2);
 
     background: linear-gradient(95deg,
@@ -265,7 +265,7 @@
 }
 
 /* BIT */
-.proyecto2-BIT::before {
+.project2-BIT::before {
     content: "";
 
     position: absolute;
@@ -288,7 +288,7 @@
     z-index: 1;
 }
 
-.proyecto2-BIT:hover {
+.project2-BIT:hover {
     border: 1px solid rgba(0, 140, 255, 0.5);
 
     box-shadow:
@@ -297,12 +297,12 @@
         0 0 45px rgba(0, 140, 255, 0.15);
 }
 
-.proyecto2-BIT:hover::before {
+.project2-BIT:hover::before {
     filter: grayscale(0%);
 }
 
 /* NOTWALL */
-.proyecto3-NOTWALL::before {
+.project3-NOTWALL::before {
     content: "";
 
     position: absolute;
@@ -325,7 +325,7 @@
     z-index: 1;
 }
 
-.proyecto3-NOTWALL:hover {
+.project3-NOTWALL:hover {
     border: 1px solid rgba(0, 255, 120, 0.45);
 
     box-shadow:
@@ -334,12 +334,12 @@
         0 0 45px rgba(0, 255, 120, 0.12);
 }
 
-.proyecto3-NOTWALL:hover::before {
+.project3-NOTWALL:hover::before {
     filter: grayscale(0%);
 }
 
 /* APPRUTINAS */
-.proyecto4-APPRUTINAS::before {
+.project4-APPRUTINAS::before {
     content: "RT";
 
     position: absolute;
@@ -355,7 +355,7 @@
     z-index: 1;
 }
 
-.proyecto4-APPRUTINAS:hover {
+.project4-APPRUTINAS:hover {
     border: 1px solid rgba(255, 217, 0, 0.5);
 
     box-shadow:
@@ -364,12 +364,12 @@
         0 0 45px rgba(255, 217, 0, 0.12);
 }
 
-.proyecto4-APPRUTINAS:hover::before {
+.project4-APPRUTINAS:hover::before {
     color: rgba(255, 217, 0, 0.1);
 }
 
 /* MI HISTORIA */
-.proyecto5-MI_HISTORIA::before {
+.project5-MI_HISTORIA::before {
     content: "";
 
     position: absolute;
@@ -392,7 +392,7 @@
     z-index: 1;
 }
 
-.proyecto5-MI_HISTORIA:hover {
+.project5-MI_HISTORIA:hover {
     border: 1px solid rgba(255, 255, 255, 0.5);
 
     box-shadow:
@@ -401,6 +401,24 @@
         0 0 45px rgba(255, 255, 255, 0.12);
 }
 
-.proyecto5-MI_HISTORIA:hover::before {
+.project5-MI_HISTORIA:hover::before {
     filter: grayscale(0%);
+}
+
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .container {
+        margin-top: 20%;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .project {
+        width: 100%;
+    }
 }

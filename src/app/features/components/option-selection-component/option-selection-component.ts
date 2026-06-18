@@ -11,6 +11,14 @@ export class OptionSelectionComponent {
 
   private router = inject(Router);
 
+  menuOpen = false;
+
+
+  desplegationMenu() {
+    console.log('Click');
+    this.menuOpen = !this.menuOpen;
+    console.log(this.menuOpen);
+  }
 
   public goHome(): void {
     this.router.navigate(['']);
