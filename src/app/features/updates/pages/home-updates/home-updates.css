@@ -14,6 +14,8 @@
     padding-top: 6%;
 
     box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
 }
 
 .containerMargin {
@@ -46,8 +48,6 @@
         0 15px 35px rgba(0, 0, 0, .45);
 
     transition: all .35s ease;
-
-    font-family: Arial, sans-serif;
 }
 
 .containerUpdate:hover {
@@ -100,19 +100,67 @@
 
 
 .state-proximamente {
-
     align-self: flex-end;
 
     padding: 8px 18px;
 
     border-radius: 30px;
-
     background: #ff2e2e;
-
     color: white;
 
     font-size: 12px;
+    font-weight: bold;
 
+    box-shadow:
+        0 0 15px rgba(255, 46, 46, .4);
+}
+
+.state-finalizada {
+    align-self: flex-end;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+    background: rgb(46, 255, 46, 0.5);
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px rgba(46, 255, 56, 0.4);
+}
+
+.titleSection {
+    color: white;
+}
+
+.updates-finished {
+    align-self: center;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+    background: rgb(46, 255, 46, 0.5);
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px rgba(46, 255, 56, 0.4);
+}
+
+.updates-futures {
+    align-self: center;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+    background: #ff2e2e;
+    color: white;
+
+    font-size: 12px;
     font-weight: bold;
 
     box-shadow:
