@@ -118,3 +118,37 @@
     box-shadow:
         0 0 15px rgba(255, 46, 46, .4);
 }
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .containerMargin {
+        margin-top: 25%;
+    }
+
+    .update {
+        text-align: center;
+    }
+
+    .titule {
+        margin-top: 5%;
+
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .explication {
+        margin-top: 5%;
+
+        font-size: 12px;
+    }
+
+    .state-proximamente, .version {
+        align-self: center;
+    }
+
+    .state-proximamente {
+        margin-top: 5%;
+    }
+}
