@@ -136,3 +136,16 @@
     max-height: 300px;
     margin-top: 20px;
 }
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .aboutWebContainer {
+        margin-top: 11%;
+    }
+
+    .aboutTitle {
+        font-size: 2vh; /* VH = Si la pantalla mide 1000px de alto: 1vh = 10px o 2vh = 20px */
+    }
+
+}

@@ -243,10 +243,12 @@
 .studie-UPGRADEHUB img {
     filter: grayscale(100%);
 }
+
 .studie-UPGRADEHUB:hover {
     filter: grayscale(0%);
     border: 1px solid rgba(0, 255, 153, 0.5);
 }
+
 .studie-UPGRADEHUB .school-web a:hover {
     background: rgba(0, 255, 153, 0.08);
     border: 1px solid rgba(0, 255, 153, 0.45);
@@ -259,9 +261,11 @@
 .studie-AFUNDACION:hover {
     border: 1px solid rgba(0, 140, 255, 0.5);
 }
+
 .studie-AFUNDACION:hover .school-name {
     color: rgb(0, 140, 255);
 }
+
 .studie-AFUNDACION .school-web a:hover {
     background: rgba(0, 140, 255, 0.08);
     border: 1px solid rgba(0, 140, 255, 0.45);
@@ -274,9 +278,11 @@
 .studie-WIRTZ:hover {
     border: 1px solid rgba(255, 217, 0, 0.5);
 }
+
 .studie-WIRTZ:hover .school-name {
     color: rgba(255, 217, 0);
 }
+
 .studie-WIRTZ .school-web a:hover {
     background: rgba(255, 217, 0, 0.08);
     border: 1px solid rgba(255, 217, 0, 0.45);
@@ -289,13 +295,39 @@
 .studie-NEBRIJA:hover {
     border: 1px solid rgba(255, 80, 80, 0.5);
 }
+
 .studie-NEBRIJA:hover .school-name {
     color: rgba(255, 80, 80);
 }
+
 .studie-NEBRIJA .school-web a:hover {
     background: rgba(255, 80, 80, 0.08);
     border: 1px solid rgba(255, 80, 80, 0.45);
     box-shadow:
         0 0 12px rgba(255, 80, 80, 0.18),
         0 0 25px rgba(255, 80, 80, 0.08);
+}
+
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .container {
+        margin-top: 25%;
+    }
+
+    .studies {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .studie {
+        width: 100%;
+        aspect-ratio: auto;
+        
+    }
+
+    .studie-content img {
+        width: 90%;
+    }
 }

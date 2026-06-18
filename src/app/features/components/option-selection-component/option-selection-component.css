@@ -1,6 +1,7 @@
 /* CONTENEDOR SUPERIOR */
 .topBar {
-    position: fixed; /*Al poner la posición fija aun que se haga scroll esto se mantiene*/
+    position: fixed;
+    /*Al poner la posición fija aun que se haga scroll esto se mantiene*/
 
     /*Con esto decimos que empiece arriba a la izquierda*/
     top: 0;
@@ -10,7 +11,8 @@
 
     width: 100%;
 
-    display: flex; /*Al hacer esto hacemos flexibles los hijos, alineándolos uno al lado de otros*/
+    display: flex;
+    /*Al hacer esto hacemos flexibles los hijos, alineándolos uno al lado de otros*/
     /* 
        Pon el primer hijo al inicio
        Pon el último hijo al final
@@ -19,11 +21,14 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 25px; /*Damos una separación del borde de 20px antes de entrar en el contenedor*/
+    padding: 25px;
+    /*Damos una separación del borde de 20px antes de entrar en el contenedor*/
 
-    box-sizing: border-box; /*El padding se mete DENTRO del width*/
+    box-sizing: border-box;
+    /*El padding se mete DENTRO del width*/
 
-    z-index: 1000; /*Todo por encima de otros elementos*/
+    z-index: 1000;
+    /*Todo por encima de otros elementos*/
 }
 
 
@@ -85,4 +90,45 @@
 
 .home img:hover {
     transform: scale(1.2);
+}
+
+.menuButton {
+    display: none;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .topBar {
+        flex-wrap: wrap;
+    }
+
+    .topBar.open {
+        background-color: rgba(0, 0, 0, 0.5); /* 50% opaco */
+    }
+
+    .menuButton {
+        display: block;
+
+        background: none;
+        border: none;
+
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .optionsSelection {
+        display: none;
+
+        width: 100%;
+        flex-direction: column;
+
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .optionsSelection.open {
+        display: flex;
+    }
 }

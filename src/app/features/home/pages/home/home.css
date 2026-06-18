@@ -94,3 +94,20 @@ body {
     display: inline-block;
 
 }
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .imgBackground img {
+        width: 75%;
+    }
+
+    .centerInfo {
+        width: 80%;
+    }
+
+    .nameComplete {
+        letter-spacing: 5px;
+    }
+
+}

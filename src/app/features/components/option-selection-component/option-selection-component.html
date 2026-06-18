@@ -1,10 +1,14 @@
-<div class="topBar">
+<div class="topBar" [class.open]="menuOpen">
 
     <button class="home" (click)="goHome()">
         <img src="assets/logosExtras/homeLogo.png" alt="Home">
     </button>
 
-    <div class="optionsSelection">
+    <button class="menuButton" (click)="desplegationMenu()">
+        ☰
+    </button>
+
+    <div class="optionsSelection" [class.open]="menuOpen">
         <button type="button" (click)="navegateQUIENSOY()">QUIÉN SOY</button>
         <button type="button" (click)="navegateEXPERIENCIALABORAL()">EXPERIENCIA LABORAL</button>
         <button type="button" (click)="navegateESTUDIOS()">ESTUDIOS</button>

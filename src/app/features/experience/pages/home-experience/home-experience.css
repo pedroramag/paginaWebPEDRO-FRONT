@@ -213,3 +213,22 @@
 .companie-ABANCA {}
 
 .companie-GRUPOBARREIRO {}
+
+
+/*responsive*/
+@media (max-width: 768px) {
+
+    .container {
+        margin-top: 20%;
+        padding: 5%;
+    }
+
+    .companies {
+        grid-template-columns: 1fr; /*Crea una única columna que ocupe todo el espacio disponible (Define cuántas columnas tiene el grid.)*/
+    }
+
+    .companie {
+        width: 100%;
+    }
+
+}
