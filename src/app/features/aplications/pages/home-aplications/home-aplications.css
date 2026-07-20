@@ -38,6 +38,53 @@
     box-sizing: border-box;
 }
 
+.containerViews {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.viewButton {
+
+    min-width: 180px;
+    padding: 14px 30px;
+
+    border: 2px solid rgb(75, 72, 72) ;
+    background: transparent;
+    color: rgb(255, 255, 255, 0.5);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s ease;
+
+}
+
+.viewButton:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.viewButton:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.viewButton:hover {
+
+    background: rgba(74, 151, 50,.08);
+
+}
+
+.viewButton.active {
+
+    background: rgb(74, 151, 50);
+    color: white;
+    box-shadow: 0 6px 18px rgba(75, 72, 72,.35);
+
+    font-size: 17px;
+
+}
+
 /* Contenedor de aplicaciones */
 .aplications {
     display: flex;

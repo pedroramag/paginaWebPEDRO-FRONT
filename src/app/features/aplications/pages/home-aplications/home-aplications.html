@@ -5,28 +5,65 @@
 
     <div class="containerAplications">
 
-        @if (mostrarMensajeNoDisponible) {
-        <div class="toast" (click)="$event.stopPropagation()">
-            DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES
+        <div class="containerViews">
+
+            <button
+                class="viewButton"
+                [class.active]="vistaSeleccionada === 'gestion'"
+                (click)="seleccionarVista('gestion')">
+                GESTIÓN
+            </button>
+
+            <button
+                class="viewButton"
+                [class.active]="vistaSeleccionada === 'inversion'"
+                (click)="seleccionarVista('inversion')">
+                INVERSIÓN
+            </button>
+
         </div>
+
+        @if (mostrarMensajeNoDisponible) {
+            <div class="toast" (click)="$event.stopPropagation()">
+                DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES
+            </div>
         }
 
-        <div class="aplications">
+        @if (vistaSeleccionada === 'gestion') {
 
-            <div class="aplication calcHipo" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
-                <!-- "$event.stopPropagation() -> detiene la propagación del evento de click,
-                      evita que el click suba al elemento padre (container)
-                      y por tanto evita que se ejecuten sus (click) -->
-                <img src="assets/logosAplications/HIPO-logo.png">
-                <div>CALCULADORA HIPOTECA</div>
+            <div class="aplications">
+
+                <div
+                    class="aplication calcHipo"
+                    (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+
+                    <img src="assets/logosAplications/HIPO-logo.png">
+
+                    <div>CALCULADORA HIPOTECA</div>
+
+                </div>
+
             </div>
 
-            <div class="aplication calcHipoINV" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
-                <img src="assets/logosAplications/HIPO-INV-logo.png">
-                <div>CALCULADORA HIPOTECA INVERSIÓN INMUEBLES</div>
+        }
+
+        @if (vistaSeleccionada === 'inversion') {
+
+            <div class="aplications">
+
+                <div
+                    class="aplication calcHipoINV"
+                    (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+
+                    <img src="assets/logosAplications/HIPO-INV-logo.png">
+
+                    <div>CALCULADORA HIPOTECA INVERSIÓN INMUEBLES</div>
+
+                </div>
+
             </div>
 
-        </div>
+        }
 
     </div>
 

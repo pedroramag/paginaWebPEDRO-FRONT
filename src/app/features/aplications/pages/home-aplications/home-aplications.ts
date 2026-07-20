@@ -18,4 +18,11 @@ export class HomeAplications {
 
   mostrarMensajeNoDisponible = false;
 
+  vistaSeleccionada: 'gestion' | 'inversion' = 'gestion';
+
+  seleccionarVista(vista: 'gestion' | 'inversion'): void {
+    this.vistaSeleccionada = vista;
+    this.mostrarMensajeNoDisponible = false;
+  }
+
 }
