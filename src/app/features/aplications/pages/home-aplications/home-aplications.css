@@ -16,15 +16,55 @@
     box-sizing: border-box;
 }
 
+.containerUser {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.loginButton {
+
+    padding: 12px 22px;
+
+    border: 2px solid rgb(75, 72, 72);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.loginButton:hover {
+
+    background: rgb(50, 106, 151);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+
+}
+
 .containerAplications {
     position: absolute;
 
     width: 80%;
-    height: 80%;
+    height: 75%;
 
-    top: 50%;
+    top: 130px;
     left: 50%;
-    transform: translate(-50%, -50%);
+
+    margin-top: 3%;
+
+    transform: translateX(-50%);
 
     border: 4px solid rgb(75, 72, 72);
     border-radius: 25px;
@@ -38,50 +78,64 @@
     box-sizing: border-box;
 }
 
+/*VIEWS*/
+
 .containerViews {
+
     display: flex;
+
     justify-content: center;
-    margin-bottom: 40px;
+
+    width: fit-content;
+
+    margin: 0 auto 40px auto;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+
 }
 
 .viewButton {
 
-    min-width: 180px;
-    padding: 14px 30px;
+    min-width: 190px;
 
-    border: 2px solid rgb(75, 72, 72) ;
-    background: transparent;
-    color: rgb(255, 255, 255, 0.5);
+    padding: 15px 30px;
+
+    border: none;
+
+    background: rgba(255, 255, 255, .18);
+
+    color: rgba(255, 255, 255, .65);
 
     font-size: 15px;
-    font-weight: 600;
+    font-weight: bold;
+
+    letter-spacing: 1px;
 
     cursor: pointer;
-    transition: .25s ease;
 
-}
+    transition: .3s;
 
-.viewButton:first-child {
-    border-radius: 12px 0 0 12px;
-}
-
-.viewButton:last-child {
-    border-radius: 0 12px 12px 0;
 }
 
 .viewButton:hover {
 
-    background: rgba(74, 151, 50,.08);
+    background: rgba(255, 255, 255, .28);
 
 }
 
 .viewButton.active {
 
     background: rgb(74, 151, 50);
-    color: white;
-    box-shadow: 0 6px 18px rgba(75, 72, 72,.35);
 
-    font-size: 17px;
+    color: white;
+
+    transform: scale(1.05);
+
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, .15);
 
 }
 
