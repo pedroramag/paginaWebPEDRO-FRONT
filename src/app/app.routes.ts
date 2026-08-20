@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { Home } from './features/home/pages/home/home';
-import { HomeExperience } from './features/experience/pages/home-experience/home-experience';
-import { HomeStudies } from './features/studies/pages/home-studies/home-studies';
-import { HomeProjects } from './features/projects/pages/home-projects/home-projects';
-import { HomeAplications } from './features/aplications/pages/home-aplications/home-aplications';
-import { HomeAboutMyWeb } from './features/aboutMyWeb/pages/home-about-my-web/home-about-my-web';
-import { HomeUpdates } from './features/updates/pages/home-updates/home-updates';
-import { HomeAboutMe } from './features/aboutMe/pages/home-about-me/home-about-me';
+import { Home } from './components/home/pages/home/home';
+import { HomeExperience } from './components/experience/pages/home-experience/home-experience';
+import { HomeStudies } from './components/studies/pages/home-studies/home-studies';
+import { HomeProjects } from './components/projects/pages/home-projects/home-projects';
+import { HomeAplications } from './components/aplications/pages/home-aplications/home-aplications';
+import { HomeAboutMyWeb } from './components/aboutMyWeb/pages/home-about-my-web/home-about-my-web';
+import { HomeUpdates } from './components/updates/pages/home-updates/home-updates';
+import { HomeAboutMe } from './components/aboutMe/pages/home-about-me/home-about-me';
+import { CalculadoraHipoteca } from './components/aplications/pages/management/calculadora-hipoteca/calculadora-hipoteca';
 
 export const routes: Routes = [
     {path: '', component: Home},
@@ -17,4 +18,5 @@ export const routes: Routes = [
     {path: 'aplicaciones', component: HomeAplications},
     {path: 'sobreMiWeb', component: HomeAboutMyWeb},
     {path: 'actualizaciones', component: HomeUpdates},
+    {path: 'calculadoraHipoteca', component: CalculadoraHipoteca}
 ];

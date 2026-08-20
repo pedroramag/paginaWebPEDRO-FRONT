@@ -1,0 +1,141 @@
+<div class="container">
+
+    <div class="Fondo">H</div>
+
+    <div class="calculator">
+
+        <div class="cabecera">
+
+            <h1>Calculadora de hipoteca</h1>
+            <p>Calcula tu cuota mensual y el coste total de tu hipoteca.</p>
+
+        </div>
+
+
+        <div class="contenido">
+
+            <!-- FORMULARIO -->
+            <form class="formulario" [formGroup]="formDatesBEFOREHipoteca">
+
+                <div class="campo">
+                    <label for="precioInmueble">Precio del inmueble</label>
+                    <div class="input-container">
+                        <input id="precioInmueble" type="number" placeholder="Ej. 250000" formControlName="inmueblePrice">
+                        <span>€</span>
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <label for="cantidadHipotecada">Cantidad de dinero hipotecado</label>
+                    <div class="input-container">
+                        <input id="cantidadHipotecada" type="number" placeholder="Ej. 200000" formControlName="hipotecaPrice">
+                        <span>€</span>
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <label for="anosHipoteca">Años de hipoteca</label>
+                    <div class="input-container">
+                        <input id="anosHipoteca" type="number" placeholder="Ej. 30" formControlName="hipotecaYears">
+                        <span>años</span>
+                    </div>
+                </div>
+
+
+                <div class="campo">
+                    <label for="interes">Interés anual</label>
+                    <div class="input-container">
+                        <input id="interes" type="number" step="0.01" placeholder="Ej. 3.50" formControlName="annualInterest">
+                        <span>%</span>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- RESULTADOS -->
+            <div class="resultados">
+
+                <h2>Resultado de la hipoteca</h2>
+
+                @if (!hipotecaGenerated) {
+
+                    <div class="resultado-principal">
+                        <span>Cuota mensual</span>
+                        <strong>-- €</strong>
+                    </div>
+
+
+                    <div class="resultados-secundarios">
+
+                        <div class="resultado">
+                            <span>Cuota anual</span>
+                            <strong>-- €</strong>
+                        </div>
+
+
+                        <div class="resultado">
+                            <span>Intereses pagados</span>
+                            <strong>-- €</strong>
+                        </div>
+
+
+                        <div class="resultado">
+                            <span>Precio final</span>
+                            <strong>-- €</strong>
+                        </div>
+
+                    </div>
+
+                } @else {
+
+                    <div class="resultado-principal">
+                        <span>Cuota mensual</span>
+                        <strong>
+                            {{ calculateMonth() }} €
+                        </strong>
+                    </div>
+
+
+                    <div class="resultados-secundarios">
+
+                        <div class="resultado">
+                            <span>Cuota anual</span>
+                            <strong>
+                                {{ calculateYear() }} €
+                            </strong>
+                        </div>
+
+
+                        <div class="resultado">
+                            <span>Intereses a pagar</span>
+                            <strong>
+                                {{ interestPaid() }} €
+                            </strong>
+                        </div>
+
+
+                        <div class="resultado">
+                            <span>Precio final</span>
+                            <strong>
+                                {{ finalPrice() }} €
+                            </strong>
+                        </div>
+
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn-generar" (click)="onGeneratedHipoteca()">GENERAR HIPOTECA</button>
+            <button type="button" class="btn-volver" routerLink="/aplicaciones">VOLVER</button>
+        </div>
+
+    </div>
+
+</div>
