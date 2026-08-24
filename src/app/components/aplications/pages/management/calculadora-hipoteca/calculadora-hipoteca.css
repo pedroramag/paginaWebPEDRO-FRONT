@@ -1,7 +1,4 @@
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
-
+/* CONTENEDOR PRINCIPAL */
 .container {
     min-height: 100vh;
     width: 100%;
@@ -22,12 +19,8 @@
     font-family: sans-serif;
 }
 
-
-/* =========================
-   H DE FONDO
-========================= */
-
-.Fondo {
+/* H DE backgroundImage */
+.backgroundImage {
     position: absolute;
 
     font-size: 100vh;
@@ -42,11 +35,7 @@
     pointer-events: none;
 }
 
-
-/* =========================
-   CALCULADORA
-========================= */
-
+/* CALCULADORA */
 .calculator {
     position: relative;
     z-index: 1;
@@ -57,25 +46,19 @@
     color: white;
 }
 
-
-/* =========================
-   CABECERA
-========================= */
-
-.cabecera {
+/* head */
+.head {
     text-align: center;
 
     margin-bottom: 40px;
 }
-
-.cabecera h1 {
+.head h1 {
     margin: 0 0 12px;
 
     font-size: 34px;
     font-weight: 700;
 }
-
-.cabecera p {
+.head p {
     margin: 0;
 
     font-size: 16px;
@@ -84,11 +67,8 @@
 }
 
 
-/* =========================
-   CONTENIDO
-========================= */
-
-.contenido {
+/* content */
+.content {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -99,11 +79,8 @@
 }
 
 
-/* =========================
-   FORMULARIO
-========================= */
-
-.formulario {
+/* form */
+.form {
     display: flex;
     flex-direction: column;
 
@@ -111,11 +88,8 @@
 }
 
 
-/* =========================
-   CAMPOS
-========================= */
-
-.campo {
+/* camps */
+.camp {
     display: flex;
     flex-direction: column;
 
@@ -124,8 +98,7 @@
 
 
 /* Labels */
-
-.campo label {
+.camp label {
     font-size: 15px;
     font-weight: 600;
 
@@ -133,16 +106,12 @@
 }
 
 
-/* =========================
-   INPUTS
-========================= */
-
+/*INPUTS*/
 .input-container {
     position: relative;
 
     width: 100%;
 }
-
 .input-container input {
     width: 100%;
     height: 50px;
@@ -165,26 +134,18 @@
     transition: 0.2s;
 }
 
-
 /* Placeholder */
-
 .input-container input::placeholder {
     color: #52525b;
 }
 
-
 /* Input seleccionado */
-
 .input-container input:focus {
     border-color: #2563eb;
 
     box-shadow:
         0 0 0 3px rgba(37, 99, 235, 0.15);
 }
-
-
-/* € / % / años */
-
 .input-container span {
     position: absolute;
 
@@ -201,11 +162,7 @@
     pointer-events: none;
 }
 
-
-/* =========================
-   RESULTADOS
-========================= */
-
+/* resultados */
 .resultados {
     padding: 25px;
 
@@ -217,9 +174,7 @@
     box-sizing: border-box;
 }
 
-
 /* Título resultados */
-
 .resultados h2 {
     margin: 0 0 25px;
 
@@ -229,11 +184,7 @@
     color: #ffffff;
 }
 
-
-/* =========================
-   RESULTADO PRINCIPAL
-========================= */
-
+/* RESULTADO PRINCIPAL */
 .resultado-principal {
     display: flex;
 
@@ -251,26 +202,18 @@
 
     border: 1px solid rgba(37, 99, 235, 0.25);
 }
-
-
 .resultado-principal span {
     font-size: 14px;
 
     color: #a1a1aa;
 }
-
-
 .resultado-principal strong {
     font-size: 28px;
 
     color: #3b82f6;
 }
 
-
-/* =========================
-   RESULTADOS SECUNDARIOS
-========================= */
-
+/* resultados SECUNDARIOS */
 .resultados-secundarios {
     display: flex;
 
@@ -278,8 +221,6 @@
 
     gap: 10px;
 }
-
-
 .resultado {
     display: flex;
 
@@ -292,26 +233,18 @@
 
     background: #18181b;
 }
-
-
 .resultado span {
     font-size: 13px;
 
     color: #a1a1aa;
 }
-
-
 .resultado strong {
     font-size: 14px;
 
     color: #e4e4e7;
 }
 
-
-/* =========================
-   BOTONES
-========================= */
-
+/* BOTONES */
 .buttons {
     display: flex;
 
@@ -319,8 +252,6 @@
 
     margin-top: 30px;
 }
-
-
 .buttons button {
     flex: 1;
 
@@ -337,115 +268,97 @@
     transition: 0.2s;
 }
 
-
-/* =========================
-   BOTÓN GENERAR
-========================= */
-
+/* BOTÓN GENERAR */
 .btn-generar {
     background: #2563eb;
 
     color: white;
 }
-
-
 .btn-generar:hover {
     background: #1d4ed8;
 
     transform: translateY(-2px);
 }
 
-
-/* =========================
-   BOTÓN VOLVER
-========================= */
-
+/* BOTÓN VOLVER */
 .btn-volver {
     background: #27272a;
 
     color: #d4d4d8;
 }
-
-
 .btn-volver:hover {
     background: #3f3f46;
 
     transform: translateY(-2px);
 }
 
+.error-message {
+    color: rgb(153, 45, 45);
+    font-size: 14px;
+}
 
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* RESPONSIVE */
 @media (max-width: 700px) {
 
     .container {
         padding: 40px 20px;
     }
 
-
     /* Una sola columna */
-
-    .contenido {
+    .content {
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
-
-    /* Cabecera */
-
-    .cabecera {
+    /* HEAD */
+    .head {
         margin-bottom: 30px;
     }
 
-
-    .cabecera h1 {
+    .head h1 {
         font-size: 27px;
     }
 
-
-    .cabecera p {
+    .head p {
         font-size: 14px;
     }
 
-
-    /* Formulario */
-
-    .formulario {
+    /* FORM */
+    .form {
         gap: 20px;
     }
 
-
-    /* Resultados */
-
+    /* RESULTADOS */
     .resultados {
         padding: 20px;
     }
-
 
     .resultado-principal {
         padding: 16px;
     }
 
-
     .resultado-principal strong {
         font-size: 23px;
     }
 
-
-    /* Botones */
-
+    /* BOTONES */
     .buttons {
         flex-direction: column;
-
         gap: 10px;
     }
 
-
-    .buttons button {
+    /* GENERAR HIPOTECA */
+    .buttons .btn-generar {
         width: 100%;
+        height: 60px !important;
+        min-height: 60px;
+    }
+
+    /* VOLVER */
+    .buttons .btn-volver {
+        width: 100%;
+        height: 40px;
+        min-height: 40px;
     }
 
 }

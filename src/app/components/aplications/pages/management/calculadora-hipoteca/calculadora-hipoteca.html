@@ -1,10 +1,10 @@
 <div class="container">
 
-    <div class="Fondo">H</div>
+    <div class="backgroundImage">H</div>
 
     <div class="calculator">
 
-        <div class="cabecera">
+        <div class="head">
 
             <h1>Calculadora de hipoteca</h1>
             <p>Calcula tu cuota mensual y el coste total de tu hipoteca.</p>
@@ -12,42 +12,46 @@
         </div>
 
 
-        <div class="contenido">
+        <div class="content">
 
             <!-- FORMULARIO -->
-            <form class="formulario" [formGroup]="formDatesBEFOREHipoteca">
+            <form class="form" [formGroup]="formDatesBEFOREHipoteca">
 
-                <div class="campo">
-                    <label for="precioInmueble">Precio del inmueble</label>
+                <div class="camp">
+                    <label for="priceProperty">Precio del inmueble</label>
                     <div class="input-container">
-                        <input id="precioInmueble" type="number" placeholder="Ej. 250000" formControlName="inmueblePrice">
+                        <input id="priceProperty" type="number" placeholder="Ej. 250.000"
+                            formControlName="inmueblePrice">
                         <span>€</span>
                     </div>
                 </div>
 
-
                 <div class="campo">
-                    <label for="cantidadHipotecada">Cantidad de dinero hipotecado</label>
+                    <label for="hipo">Cantidad de dinero hipotecado</label>
                     <div class="input-container">
-                        <input id="cantidadHipotecada" type="number" placeholder="Ej. 200000" formControlName="hipotecaPrice">
+                        <input id="hipo" type="number" placeholder="Ej. 200.000" formControlName="hipotecaPrice">
                         <span>€</span>
                     </div>
                 </div>
 
-
                 <div class="campo">
-                    <label for="anosHipoteca">Años de hipoteca</label>
+                    <label for="yearsHipo">Años de hipoteca</label>
                     <div class="input-container">
-                        <input id="anosHipoteca" type="number" placeholder="Ej. 30" formControlName="hipotecaYears">
+                        <input id="yearsHipo" type="number" placeholder="Max. 40" formControlName="hipotecaYears">
                         <span>años</span>
                     </div>
+                    @if (errorHipotecaYears) {
+                        <b><p class="error-message">
+                            Años no válidos. Los años de hipoteca no pueden ser superiores a 40.
+                        </p></b>
+                    }
                 </div>
 
-
                 <div class="campo">
-                    <label for="interes">Interés anual</label>
+                    <label for="anualInterest">Interés anual</label>
                     <div class="input-container">
-                        <input id="interes" type="number" step="0.01" placeholder="Ej. 3.50" formControlName="annualInterest">
+                        <input id="anualInterest" type="number" step="0.01" placeholder="Ej. 3.50"
+                            formControlName="annualInterest">
                         <span>%</span>
                     </div>
                 </div>
@@ -99,7 +103,7 @@
 
 
                     <div class="resultados-secundarios">
-
+                        ca
                         <div class="resultado">
                             <span>Cuota anual</span>
                             <strong>

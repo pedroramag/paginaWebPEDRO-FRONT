@@ -221,4 +221,39 @@
         margin-top: 10%;
     }
 
+    .containerUser {
+        margin-top: 25%;
+    }
+
+    .containerViews {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .viewButton {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .aplications {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .aplication {
+        width: 180px;
+        min-height: 150px;
+    }
+
+    .aplication img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 10px;
+    }
+
+    .aplication div {
+        font-size: 10px;
+    }
 }

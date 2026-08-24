@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators, ValueChangeEvent } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -12,8 +12,9 @@ export class CalculadoraHipoteca {
 
   //VARIABLES
   hipotecaGenerated: boolean = false;
+  errorHipotecaYears = false;
 
-  // DATES USER
+  // FORMULARIOS
   formDatesBEFOREHipoteca = new FormGroup({
 
     inmueblePrice: new FormControl<number | null>(null, {
@@ -29,10 +30,12 @@ export class CalculadoraHipoteca {
       ]
     }),
     hipotecaYears: new FormControl<number | null>(null, {
-      validators: [
-        Validators.required,
-        Validators.min(0)
-      ]
+      validators:
+        [
+          Validators.required,
+          Validators.min(0),
+          Validators.max(40)
+        ]
     }),
     annualInterest: new FormControl<number | null>(null, {
       validators: [
@@ -43,14 +46,24 @@ export class CalculadoraHipoteca {
 
   });
 
+  // GENERAR
   onGeneratedHipoteca() {
 
+    this.errorHipotecaYears = false;
+
     if (this.formDatesBEFOREHipoteca.invalid) {
+
+      if (this.formDatesBEFOREHipoteca.get('hipotecaYears')?.hasError('max')) {
+        this.errorHipotecaYears = true;
+      }
+
       return;
     }
+
     this.hipotecaGenerated = true;
   }
 
+  // MÉTODOS
   calculateMonth(): number {
 
     const hipotecaPrince = this.formDatesBEFOREHipoteca.get('hipotecaPrice')?.value;
@@ -99,4 +112,3 @@ export class CalculadoraHipoteca {
   }
 
 }
-
