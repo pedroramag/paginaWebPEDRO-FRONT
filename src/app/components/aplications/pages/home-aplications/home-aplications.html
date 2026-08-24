@@ -1,0 +1,71 @@
+<!-- HEAD -->
+<app-option-selection-component />
+
+<div class="container" (click)="mostrarMensajeNoDisponible = false">
+
+    <div class="containerUser">
+
+        <button class="loginButton" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+            <span>🔐</span>
+            INICIAR SESIÓN
+        </button>
+
+    </div>
+
+    <div class="containerAplications">
+
+        <div class="containerViews">
+
+            <button class="viewButton" [class.active]="vistaSeleccionada === 'gestion'"
+                (click)="seleccionarVista('gestion')">
+                GESTIÓN
+            </button>
+
+            <button class="viewButton" [class.active]="vistaSeleccionada === 'inversion'"
+                (click)="seleccionarVista('inversion')">
+                INVERSIÓN
+            </button>
+
+        </div>
+
+        @if (mostrarMensajeNoDisponible) {
+        <div class="toast" (click)="$event.stopPropagation()">
+            DISPONIBLE EN PRÓXIMAS ACTUALIZACIONES
+        </div>
+        }
+
+        @if (vistaSeleccionada === 'gestion') {
+
+        <div class="aplications" >
+
+            <div class="aplication calcHipo" routerLink="/calculadoraHipoteca">
+
+                <img src="assets/logosAplications/HIPO-logo.png">
+
+                <div>CALCULADORA HIPOTECA</div>
+
+            </div>
+
+        </div>
+
+        }
+
+        @if (vistaSeleccionada === 'inversion') {
+
+        <div class="aplications">
+
+            <div class="aplication calcHipoINV" (click)="$event.stopPropagation(); mostrarMensajeNoDisponible = true">
+
+                <img src="assets/logosAplications/HIPO-INV-logo.png">
+
+                <div>CALCULADORA HIPOTECA INVERSIÓN INMUEBLES</div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
