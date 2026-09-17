@@ -239,6 +239,24 @@
     transform: translateY(-2px);
 }
 
+/* INTERNATIONAL BUSINESS SCHOOL */
+.studie-INTERNATIONALBUSINESSSCHOOL img {
+    filter: grayscale(100%);
+}
+
+.studie-INTERNATIONALBUSINESSSCHOOL:hover {
+    filter: grayscale(0%);
+    border: 1px solid rgba(0, 4, 255, 0.5);
+}
+
+.studie-INTERNATIONALBUSINESSSCHOOL .school-web a:hover {
+    background: rgba(0, 4, 255, 0.08);
+    border: 1px solid rgba(0, 4, 255, 0.45);
+    box-shadow:
+        0 0 12px rgba(0, 4, 255, 0.18),
+        0 0 25px rgba(0, 4, 255, 0.08);
+}
+
 /* UPGRADE HUB */
 .studie-UPGRADEHUB img {
     filter: grayscale(100%);
