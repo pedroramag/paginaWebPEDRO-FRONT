@@ -20,5 +20,5 @@ export const routes: Routes = [
     {path: 'sobreMiWeb', component: HomeAboutMyWeb},
     {path: 'actualizaciones', component: HomeUpdates},
     {path: 'calculadoraHipoteca', component: CalculadoraHipoteca},
-    //{path: 'calculadoraHipotecaINV', component: CalculadoraHipotecaInversion}
+    {path: 'calculadoraHipotecaINV', component: CalculadoraHipotecaInversion}
 ];
