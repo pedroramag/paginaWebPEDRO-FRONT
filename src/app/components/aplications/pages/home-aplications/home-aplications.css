@@ -192,6 +192,11 @@
     line-height: 1.4s;
 }
 
+.interesCompuesto img {
+    width: 125px;
+    height: 100px;
+}
+
 .toast {
     position: fixed;
     bottom: 50%;

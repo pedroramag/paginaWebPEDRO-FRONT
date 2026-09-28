@@ -5,6 +5,7 @@
     position: relative;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -17,4 +18,41 @@
 
     font-family: sans-serif;
     color: white;
+}
+
+.construction {
+    padding: 18px 28px;
+    border: 1px solid rgba(201, 74, 74, 0.8);
+    border-radius: 12px;
+    background: rgba(176, 42, 42, 0.6);
+    color: #dd7575;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .2);
+}
+
+.buttonGoHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 22px auto 0;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: #9ca9bc;
+    cursor: pointer;
+    font: inherit;
+    font-size: 22px;
+    transition: color .18s ease, border-color .18s ease, background .18s ease;
+    border-color: rgba(148, 163, 184, .15);
+    background: rgba(255, 255, 255, .035);
+}
+
+.buttonGoHome:hover {
+    transition: 0.5s ease;
+    font-size: 26px;
 }

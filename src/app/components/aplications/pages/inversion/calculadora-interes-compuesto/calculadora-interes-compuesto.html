@@ -1,0 +1,122 @@
+<div class="page-shell">
+        <div class="ambient ambient--top" aria-hidden="true"></div>
+        <div class="ambient ambient--bottom" aria-hidden="true"></div>
+
+        <main class="calculator-page">
+                <header class="page-heading">
+                        <span class="eyebrow"><span class="eyebrow__dot"></span> PLANIFICA TU FUTURO</span>
+                        <h1>Calculadora de <span>interés compuesto</span></h1>
+                        <p>Proyecta el crecimiento de tus inversiones y descubre el efecto de invertir a largo plazo.
+                        </p>
+                </header>
+
+                <section class="calculator" aria-labelledby="calculator-title">
+                        <div class="calculator__intro">
+                                <div>
+                                        <span class="section-label">PROYECCIÓN DE INVERSIÓN</span>
+                                        <h2>Configura tu inversión</h2>
+                                        <p>Ajusta los valores para preparar tu simulación.</p>
+                                </div>
+                                <div class="growth-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 48 48" fill="none">
+                                                <path d="M8 35.5 19 24l7 6.5L40 15" stroke="currentColor"
+                                                        stroke-width="2.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                <path d="M30 15h10v10" stroke="currentColor" stroke-width="2.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 40h32" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" opacity=".45" />
+                                        </svg>
+                                </div>
+                        </div>
+
+                        <div class="calculator__content">
+                                <div class="calculator__form">
+                                        <div class="fields-grid">
+                                                <div class="input-group">
+                                                        <label for="initialBalance">
+                                                                Capital inicial
+                                                                <span>Tu inversión de partida</span>
+                                                        </label>
+                                                        <div class="input-wrap">
+                                                                <input type="number" [(ngModel)]="invIni">
+                                                                @if (invIni < 0) { <span class="error-tooltip">
+                                                                        El valor no puede ser negativo
+                                                                        </span>
+                                                                        }
+                                                                        <span class="input-unit"
+                                                                                aria-hidden="true">€</span>
+                                                        </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                        <label for="monthlyInvestment">
+                                                                Inversión mensual
+                                                                <span>Tu aportación periódica</span>
+                                                        </label>
+                                                        <div class="input-wrap">
+                                                                <input type="number" [(ngModel)]="invMonth">
+                                                                @if (invMonth < 0) { <span class="error-tooltip">
+                                                                        El valor no puede ser negativo
+                                                                        </span>
+                                                                        }
+                                                                        <span class="input-unit" aria-hidden="true">€ /
+                                                                                mes</span>
+                                                        </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                        <label for="returnRate">
+                                                                Rentabilidad anual
+                                                                <span>Rendimiento esperado</span>
+                                                        </label>
+                                                        <div class="input-wrap">
+                                                                <input type="number" [(ngModel)]="porcentajeMedio">
+                                                                @if (porcentajeMedio < 0) { <span class="error-tooltip">
+                                                                        El valor no puede ser negativo
+                                                                        </span>
+                                                                        }
+                                                                        <span class="input-unit"
+                                                                                aria-hidden="true">%</span>
+                                                        </div>
+                                                </div>
+
+                                                <div class="input-group">
+                                                        <label for="years">
+                                                                Duración
+                                                                <span>Tiempo de inversión</span>
+                                                        </label>
+                                                        <div class="input-wrap">
+                                                                <input type="number" [(ngModel)]="yearsDuration">
+                                                                @if (yearsDuration < 0) { <span class="error-tooltip">
+                                                                        El valor no puede ser menor a 1
+                                                                        </span>
+                                                                        }
+                                                                        <span class="input-unit"
+                                                                                aria-hidden="true">años</span>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <button class="calculate-button" type="button" (click)="calculator()">
+                                                Calcular proyección
+                                                <span aria-hidden="true">↗</span>
+                                        </button>
+                                </div>
+
+                                <aside class="result">
+                                        <span class="result__eyebrow">AL FINAL DE TU INVERSIÓN</span>
+                                        <span class="result__label">Dinero final estimado</span>
+                                        <strong id="finalResult">{{dineroFinal | number:'1.2-2'}} €</strong>
+                                        <div class="result__divider"></div>
+                                        <p>La constancia y el tiempo pueden marcar una gran diferencia.</p>
+                                </aside>
+                        </div>
+                </section>
+
+                <button class="back-button" type="button" routerLink="/aplicaciones">
+                        <span aria-hidden="true">←</span>
+                        Volver a aplicaciones
+                </button>
+        </main>
+</div>

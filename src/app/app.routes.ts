@@ -9,6 +9,7 @@ import { HomeUpdates } from './components/updates/pages/home-updates/home-update
 import { HomeAboutMe } from './components/aboutMe/pages/home-about-me/home-about-me';
 import { CalculadoraHipoteca } from './components/aplications/pages/management/calculadora-hipoteca/calculadora-hipoteca';
 import { CalculadoraHipotecaInversion } from './components/aplications/pages/inversion/calculadora-hipoteca-inversion/calculadora-hipoteca-inversion';
+import { CalculadoraInteresCompuesto } from './components/aplications/pages/inversion/calculadora-interes-compuesto/calculadora-interes-compuesto';
 
 export const routes: Routes = [
     {path: '', component: Home},
@@ -20,5 +21,6 @@ export const routes: Routes = [
     {path: 'sobreMiWeb', component: HomeAboutMyWeb},
     {path: 'actualizaciones', component: HomeUpdates},
     {path: 'calculadoraHipoteca', component: CalculadoraHipoteca},
-    {path: 'calculadoraHipotecaINV', component: CalculadoraHipotecaInversion}
+    {path: 'calculadoraHipotecaINV', component: CalculadoraHipotecaInversion},
+    {path: 'calculadoraInteresCompuesto', component: CalculadoraInteresCompuesto}
 ];
