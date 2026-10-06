@@ -8,4 +8,12 @@ import { LinkedinComponent } from '../../../options/linkedin-component/linkedin-
   templateUrl: './home-experience.html',
   styleUrl: './home-experience.css',
 })
-export class HomeExperience {}
+export class HomeExperience {
+
+  vistaSeleccionada: 'TODO' | 'SOFTWARE ENGINNER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER' = 'TODO';
+
+  seleccionarVista(vista: 'TODO' | 'SOFTWARE ENGINNER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER'): void {
+    this.vistaSeleccionada = vista;
+  }
+
+}
