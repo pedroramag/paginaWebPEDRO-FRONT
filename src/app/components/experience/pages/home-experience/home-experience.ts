@@ -10,9 +10,9 @@ import { LinkedinComponent } from '../../../options/linkedin-component/linkedin-
 })
 export class HomeExperience {
 
-  vistaSeleccionada: 'TODO' | 'SOFTWARE ENGINNER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER' = 'TODO';
+  vistaSeleccionada: 'TODO' | 'SOFTWARE ENGINEER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER' = 'TODO';
 
-  seleccionarVista(vista: 'TODO' | 'SOFTWARE ENGINNER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER'): void {
+  seleccionarVista(vista: 'TODO' | 'SOFTWARE ENGINEER' | 'SECURITY & RESILIENCE' | 'NETWORK ENGINEER'): void {
     this.vistaSeleccionada = vista;
   }
 
